@@ -3,11 +3,13 @@ version: '3.8'
 services:
 
   mysql_db:
-    image: mysql:8.0
+    image: mysql:8.0  
     container_name: mysql_db
     environment:
-      MYSQL_ROOT_PASSWORD: utec
+      MYSQL_ROOT_PASSWORD: rootpassword
       MYSQL_DATABASE: mydb
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
     ports:
       - "3306:3306"
     volumes:
